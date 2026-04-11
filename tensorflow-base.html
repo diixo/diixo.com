@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T56LB6K');</script>
+  <!-- End Google Tag Manager -->
+
+    <!-- SEO -->
+    <meta name="keywords" content="Diixo - searching platform"/>
+
+	<meta property="og:site_name" content="Diixo" />
+    <meta property="og:type" content="diixo web-search channels"/>
+    <meta property="og:url" content="https://diixo.com/tensorflow-base.html"/>
+  
+  
+    <title>Tensorflow base operations</title>
+    <meta property="og:title" content="Tensorflow base operations"/>
+
+    <meta name="description" content="Tensorflow base operations">
+    <meta property="og:description" content="Tensorflow base operations"/>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-x.css">
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T56LB6K"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">Diixo<span class="text-primary">.</span> </a></h1>
+          </div>
+
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="index.html#home-section" class="nav-link">Home</a></li>
+                <li class="has-children">
+                  <a href="index.html#about-section" class="nav-link">About Us</a>
+                  <ul class="dropdown">
+                    <li><a href="single.html" class="nav-link">Machine-Learning</a></li>
+                    <li><a href="bookmarks.html" class="nav-link">Bookmarks</a></li>
+					<li><a href="find-datascience-engineer.html" class="nav-link">Find Data-science engineer</a></li>
+					<li><a href="it-directory.html" class="nav-link">IT directory (A..Z)</a></li>
+                  </ul>
+                </li>
+
+
+                <li><a href="index.html#blog-section" class="nav-link active">Blog</a></li>
+                <li><a href="index.html#contact-section" class="nav-link">Contact</a></li>
+                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-facebook"></span></a>
+                </li>
+                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-twitter"></span></a>
+                </li>
+                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#"
+              class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+
+    </header>
+
+
+
+    <div class="site-blocks-cover overlay" style="background-image: url(images/img_3.jpg);" data-aos="fade">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+    
+    
+          <div class="col-md-12 mt-lg-5 text-center">
+            <h1>TensorFlow base operations</h1>
+            <p class="post-meta">September 29, 2022 &bull; Posted by <a href="/it-directory.html">IT directory</a>
+            </p>
+    
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <section class="site-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">TensorFlow base operations</h2>
+            <p class="lead" data-aos="fade-up" data-aos-delay="">NeuralNetwork tensorflow layers examples and usage</p>
+          </div>
+        </div>
+		
+
+        <div class="row">
+			<div class="col">
+				<h2 class="h4 mt-0 font-weight-bold">
+					1. TensorFlow conv2d (tf.nn.conv2d)
+				</h2>
+
+				<p>Computes a 2-D convolution given 4-D *input* and *filter* tensors.</p>
+
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln"><b>tf.nn.conv2d</b>(
+    input,
+    filter=None,
+    strides=None,
+    padding=None,
+    use_cudnn_on_gpu=True,
+    data_format='NHWC',
+    dilations=[1, 1, 1, 1],
+    name=None,
+    filters=None
+)</span></code></pre>				
+				
+				<p>Given an input tensor of shape [batch, in_height, in_width, in_channels] and a filter / kernel tensor of shape [filter_height, filter_width, in_channels, out_channels], this op performs the following:</p>
+				
+				<p>Flattens the filter to a 2-D matrix with shape [filter_height * filter_width * in_channels, output_channels].
+				Extracts image patches from the input tensor to form a virtual tensor of shape [batch, out_height, out_width, filter_height * filter_width * in_channels].
+				For each patch, right-multiplies the filter matrix and the image patch vector.
+				In detail, with the default NHWC format</p>
+
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln">output[b, i, j, k] =
+    sum_{di, dj, q} input[b, strides[1] * i + di, strides[2] * j + dj, q]
+                    * filter[di, dj, q, k]</span></code></pre>
+
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln">Must have <b>strides[0] = strides[3] = 1</b>. 
+For the most common case of the same horizontal and vertices strides, <b>strides = [1, stride, stride, 1]</b></span></code></pre>
+
+				<p><b>Arguments:</b></p>
+				
+				 <blockquote>
+					<p>- <b>input</b>: A Tensor. Must be one of the following types: half, bfloat16, float32, float64. A 4-D tensor. The dimension order is interpreted according to the value of data_format, see below for details.</p>
+					<p>- <b>filter</b>: A Tensor. Must have the same type as input. A 4-D tensor of shape [filter_height, filter_width, in_channels, out_channels]</p>
+					<p>- <b>strides</b>: An int or list of ints that has length 1, 2 or 4. The stride of the sliding window for each dimension of input. If a single value is given it is replicated in the H and W dimension. By default the N and C dimensions are set to 1. The dimension order is determined by the value of data_format, see below for details.</p>
+					<p>- <b>padding</b>: Either the string "SAME" or "VALID" indicating the type of padding algorithm to use, or a list indicating the explicit paddings at the start and end of each dimension. When explicit padding is used and data_format is "NHWC", this should be in the form [[0, 0], [pad_top, pad_bottom], [pad_left, pad_right], [0, 0]]. When explicit padding used and data_format is "NCHW", this should be in the form [[0, 0], [0, 0], [pad_top, pad_bottom], [pad_left, pad_right]].</p>
+					<p>- <b>data_format</b>: An optional string from: "NHWC", "NCHW". Defaults to "NHWC". Specify the data format of the input and output data. With the default format "NHWC", the data is stored in the order of: [batch, height, width, channels]. Alternatively, the format could be "NCHW", the data storage order of: [batch, channels, height, width].</p>
+					<p>- <b>dilations</b>: An int or list of ints that has length 1, 2 or 4, defaults to 1. The dilation factor for each dimension ofinput. If a single value is given it is replicated in the H and W dimension. By default the N and C dimensions are set to 1. If set to k > 1, there will be k-1 skipped cells between each filter element on that dimension. The dimension order is determined by the value of data_format, see above for details. Dilations in the batch and depth dimensions if a 4-d tensor must be 1.</p>
+					<p>- <b>name</b>: A name for the operation (optional).</p>
+					<p>- <b>filters</b>: Alias for filter.</p>
+				</blockquote>
+				
+				<p><b>Returns variable:</b></p>
+				<blockquote><p>A Tensor. Has the same type as input.</p></blockquote>
+
+			</div>
+		</div>
+		
+        <div class="row">
+			<div class="col">
+				<h2 class="h4 mt-0 font-weight-bold">
+					2. TensorFlow bias_add (tf.nn.bias_add)
+				</h2>
+				
+				<p>Adds bias to value.</p>
+				<p><b>Aliases</b>: tf.compat.v1.nn.bias_add, tf.compat.v2.nn.bias_add</p>
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln"><b>tf.nn.bias_add</b>(
+    value,
+    bias,
+    data_format=None,
+    name=None
+)</span></code></pre>	
+				
+				<p>This is (mostly) a special case of tf.add where bias is restricted to 1-D. Broadcasting is supported, so value may have any number of dimensions. Unlike tf.add, the type of bias is allowed to differ from value in the case where both types are quantized.</p>
+				
+				<p><b>Arguments:</b></p>
+				
+				<blockquote>
+					<p>- <b>value</b>: A Tensor with type float, double, int64, int32, uint8, int16, int8, complex64, or complex128.</p>
+					<p>- <b>bias</b>: A 1-D Tensor with size matching the channel dimension of value. Must be the same type as value unless value is a quantized type, in which case a different quantized type may be used.</p>
+					<p>- <b>data_format</b>: A string. 'N...C' and 'NC...' are supported.</p>
+					<p>- <b>name</b>: A name for the operation (optional).</p>
+				</blockquote>
+				
+				<p><b>Returns variable:</b></p>
+				<blockquote><p>A Tensor with the same type as value.</p></blockquote>
+							
+			</div>
+		</div>
+
+        <div class="row">
+			<div class="col">
+				<h2 class="h4 mt-0 font-weight-bold">
+					3. TensorFlow max_pool (tf.nn.max_pool)
+				</h2>
+				
+				<p>Performs the max pooling on the input.</p>
+				
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln"><b>tf.nn.max_pool</b>(
+    value,
+    ksize,
+    strides,
+    padding,
+    data_format='NHWC',
+    name=None,
+    input=None
+)</span></code></pre>
+
+				<p><b>Arguments:</b></p>
+				<blockquote>
+					<p>- <b>value</b>: A 4-D Tensor of the format specified by data_format.</p>
+					<p>- <b>ksize</b>: An int or list of ints that has length 1, 2 or 4. The size of the window for each dimension of the input tensor.</p>
+					<p>- <b>strides</b>: An int or list of ints that has length 1, 2 or 4. The stride of the sliding window for each dimension of the input tensor.</p>
+					<p>- <b>padding</b>: A string, either 'VALID' or 'SAME'. The padding algorithm. See the "returns" section of tf.nn.convolution for details.</p>
+					<p>- <b>name</b>: Optional name for the operation.</p>
+					<p>- <b>input</b>: Alias for value.</p>
+				</blockquote>
+							
+			</div>
+		</div>
+		<div class="row">	
+			<div class="col">
+				<h2 class="h4 mt-0 font-weight-bold">
+					4. TensorFlow reduce_mean (tf.math.reduce_mean)
+				</h2>
+				<p><b>Aliases</b>: tf.compat.v1.math.reduce_mean, tf.compat.v1.reduce_mean, tf.reduce_mean</p>
+				<p>Computes the mean of elements across dimensions of a tensor.</p>
+				
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln"><b>tf.math.reduce_mean</b>(
+    input_tensor,
+    axis=None,
+    keepdims=None,
+    name=None,
+    reduction_indices=None,
+    keep_dims=None
+)</span></code></pre>
+				
+				<p>Reduces input_tensor along the dimensions given in axis. Unless keepdims is true, the rank of the tensor is reduced by 1 for each entry in axis. If keepdims is true, the reduced dimensions are retained with length 1.</p>
+				
+				<p>If axis is None, all dimensions are reduced, and a tensor with a single element is returned.</p>
+				<p><b>Example:</b></p>
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln">x = tf.constant([[1., 1.], [2., 2.]])
+tf.reduce_mean(x)  # 1.5
+tf.reduce_mean(x, 0)  # [1.5, 1.5]
+tf.reduce_mean(x, 1)  # [1.,  2.]
+</span></code></pre>
+
+
+				<p><b>Returns:</b></p>
+				<blockquote>The reduced tensor.</blockquote>
+
+				<p><b>Numpy compatibility:</b></p>
+				Equivalent to np.mean
+
+				<p>Please note that np.mean has a dtype parameter that could be used to specify the output type. By default this is dtype=float64. On the other hand, tf.reduce_mean has an aggressive type inference from input_tensor.</p>
+
+				<p><b>Example:</b></p>
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln">x = tf.constant([1, 0, 1, 0])
+tf.reduce_mean(x)  # 0
+y = tf.constant([1., 0., 1., 0.])
+tf.reduce_mean(y)  # 0.5
+</span></code></pre>
+							
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<h2 class="h4 mt-0 font-weight-bold">
+					5. TensorFlow reduce_sum (tf.math.reduce_sum)
+				</h2>
+				<p><b>Aliases</b>: tf.compat.v1.math.reduce_sum, tf.compat.v1.reduce_sum, tf.reduce_sum</p>
+				<p>Computes the sum of elements across dimensions of a tensor. (deprecated arguments)</p>
+				
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln"><b>tf.math.reduce_sum</b>(
+    input_tensor,
+    axis=None,
+    keepdims=None,
+    name=None,
+    reduction_indices=None,
+    keep_dims=None
+)</span></code></pre>
+				
+				<p>Reduces input_tensor along the dimensions given in axis. Unless keepdims is true, the rank of the tensor is reduced by 1 for each entry in axis. If keepdims is true, the reduced dimensions are retained with length 1.</p>
+				
+				<p>If axis is None, all dimensions are reduced, and a tensor with a single element is returned.</p>
+				
+				<p><b>Example:</b></p>
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln">x = tf.constant([[1, 1, 1], [1, 1, 1]])
+tf.reduce_sum(x)  # 6
+tf.reduce_sum(x, 0)  # [2, 2, 2]
+tf.reduce_sum(x, 1)  # [3, 3]
+tf.reduce_sum(x, 1, keepdims=True)  # [[3], [3]]
+tf.reduce_sum(x, [0, 1])  # 6
+</span></code></pre>
+
+				<p><b>Arguments:</b></p>
+				<blockquote>
+					<p>- <b>input</b>: The tensor to reduce. Should have numeric type.</p>
+					<p>- <b>axis</b>: The dimensions to reduce. If None (the default), reduces all dimensions. Must be in the range [-rank(input_tensor), rank(input_tensor)).</p>
+					<p>- <b>keepdims</b>: If true, retains reduced dimensions with length 1.</p>
+					<p>- <b>name</b>: A name for the operation (optional).</p>
+					<p>- <b>reduction_indices</b>: The old (deprecated) name for axis.</p>
+					<p>- <b>keep_dims</b>: Deprecated alias for keepdims.</p>
+				</blockquote>
+							
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<h2 class="h4 mt-0 font-weight-bold">
+					6. TensorFlow softmax_cross_entropy_with_logits (tf.nn.softmax_cross_entropy_with_logits)
+				</h2>
+				
+				<p>Distributed training with TensorFlow</p>
+				
+				<p>Measures the probability error in discrete classification tasks in which the classes are mutually exclusive (each entry is in exactly one class). For example, each CIFAR-10 image is labeled with one and only one label: an image can be a dog or a truck, but not both.</p>
+				
+				<p><b>NOTE</b>: While the classes are mutually exclusive, their probabilities need not be. All that is required is that each row of <b>labels</b> is a valid probability distribution. If they are not, the computation of the gradient will be incorrect.</p>
+				
+				<p>If using exclusive <b>labels</b> (wherein one and only one class is true at a time), see <b>sparse_softmax_cross_entropy_with_logits</b>.<p>
+				
+				<p>Usage:</p>
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln">logits = [[4.0, 2.0, 1.0], [0.0, 5.0, 1.0]] labels = [[1.0, 0.0, 0.0], [0.0, 0.8, 0.2]] 
+tf.nn.softmax_cross_entropy_with_logits(labels=labels, logits=logits)
+</span></code></pre>
+
+				<p><b>WARNING</b>: This op expects unscaled <b>logits</b>, since it performs a <b>softmax</b> on <b>logits</b> internally for efficiency. Do not call this op with the output of <b>softmax</b>, as it will produce incorrect results.</p>
+				
+				<p>A common use case is to have logits and labels of shape <b>[batch_size, num_classes]</b>, but higher dimensions are supported, with the <b>axis</b> argument specifying the class dimension.</p>
+
+				<p><b>Logits</b> and <b>labels</b> must have the same dtype (either <b>float16</b>, <b>float32</b>, or <b>float64</b>).</p>
+
+				<p>Backpropagation will happen into both <b>logits</b> and <b>labels</b>. To disallow backpropagation into labels, pass label tensors through <b>tf.stop_gradient</b> before feeding it to this function.</p>
+
+				<p>Note that to avoid confusion, it is required to pass only named arguments to this function.</p>
+
+				<p><b>Arguments</b>:</p>
+				<blockquote>
+				<p>- <b>labels</b>: Each vector along the class dimension should hold a valid probability distribution e.g. for the case in which labels are of shape <b>[batch_size, num_classes]</b>, each row of <b>labels[i]</b> must be a valid probability distribution.</p>
+				<p>- <b>logits</b>: Per-label activations, typically a linear output. These activation energies are interpreted as unnormalized log probabilities.</p>
+				<p>- <b>axis</b>: The class dimension. Defaulted to -1 which is the last dimension.</p>
+				<p>- <b>name</b>: A name for the operation (optional).</p>
+				</blockquote>
+				<p><b>Returns</b>:</p>
+
+				<p>A <b>Tensor</b> that contains the softmax cross entropy loss. Its type is the same as <b>logits</b> and its shape is the same as <b>labels</b> except that it does not have the last dimension of <b>labels</b>.</p>
+
+			</div>
+        </div>
+		
+		<div class="row">
+			<div class="col">
+				<h2 class="h4 mt-0 font-weight-bold">
+					7. TensorFlow matmul (tf.matmul)
+				</h2>
+				
+				<p><b>Aliases</b>: tf.linalg.matmul</p>
+				<p>Multiplies matrix a by matrix b, producing a * b.</p>
+				
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln"><b>tf.linalg.matmul</b>(
+    a,
+    b,
+    transpose_a=False,
+    transpose_b=False,
+    adjoint_a=False,
+    adjoint_b=False,
+    a_is_sparse=False,
+    b_is_sparse=False,
+    name=None
+)</span></code></pre>	
+				
+				<p>Argumentss:</p>
+				<blockquote>
+				<p>- <b>a</b>: <b>tf.Tensor</b> of type <b>float16</b>, <b>float32</b>, <b>float64</b>, <b>int32</b>, <b>complex64</b>, <b>complex128</b> and rank > 1.</p>
+				<p>- <b>b</b>: <b>tf.Tensor</b> with same type and rank as a.</p>
+				</blockquote>
+
+				<p><b>Returns</b>:</p>
+				<p>A <b>tf.Tensor</b> of the same type as a and b where each inner-most matrix is the product of the corresponding matrices in a and b, e.g. if all transpose or adjoint attributes are False:</p>
+
+				
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln">output[..., i, j] = sum_k (a[..., i, k] * b[..., k, j]), for all indices i, j.</span></code></pre>
+
+				<p><b>Note</b>: This is matrix product, not element-wise product.</p>
+				<p><b>Raises</b>:</p>
+				<blockquote>
+				<p>- <b>ValueError</b>: If transpose_a and adjoint_a, or transpose_b and adjoint_b are both set to True.</p>
+				</blockquote>
+				<p><b>Example</b>:</p>
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln"><b># Create some tensors</b>
+a = tf.constant([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])
+b = tf.constant([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])
+c = tf.<b>matmul</b>(a, b)
+
+print(c)</span></code></pre>	
+
+<p>Executing operation MatMul:</p>
+
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln">tf.Tensor(
+[[22. 28.]
+ [49. 64.]], shape=(2, 2), dtype=float32)</span></code></pre>
+
+
+			</div>
+        </div>
+		
+		<div class="row">
+			<div class="col">
+				<h2 class="h4 mt-0 font-weight-bold">
+					8. TensorFlow softmax_cross_entropy_with_logits (tf.nn.softmax_cross_entropy_with_logits)
+				</h2>
+				
+				<p>Computes softmax cross entropy between <b>logits</b> and <b>labels</b>.</p>
+				
+<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln"><b>tf.nn.softmax_cross_entropy_with_logits</b>(
+    labels, logits, axis=-1, name=None
+)</span></code></pre>
+
+				<p>Measures the probability error in discrete classification tasks in which the classes are mutually exclusive (each entry is in exactly one class). For example, each CIFAR-10 image is labeled with one and only one label: an image can be a dog or a truck, but not both.</p>
+
+				<blockquote>
+				<p><b>Note</b>: While the classes are mutually exclusive, their probabilities need not be. All that is required is that each row of labels is a valid probability distribution. If they are not, the computation of the gradient will be incorrect.</p>
+				</blockquote>
+
+				<p>If using exclusive <b>labels</b> (wherein one and only one class is true at a time), see <b>sparse_softmax_cross_entropy_with_logits</b>.</p>
+
+				<p><b>Usage</b>:</p>
+
+				<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln"><b># Create some tensors</b>
+logits = [[4.0, 2.0, 1.0], [0.0, 5.0, 1.0]]
+labels = [[1.0, 0.0, 0.0], [0.0, 0.8, 0.2]]
+c = tf.nn.<b>softmax_cross_entropy_with_logits</b>(labels=labels, logits=logits)
+print(c)</span></code></pre>
+
+				<p>Executing operation of <b>softmax_cross_entropy_with_logits</b>:</p>
+				
+				<pre class="lang-none prettyprint prettyprinted" style=""><code><span class="pln">&lt;tf.Tensor: shape=(2,), dtype=float32,
+numpy=array([0.16984604, 0.82474494], dtype=float32)&gt;</span></code></pre>
+
+
+				<blockquote>
+				<b>Warning</b>: This op expects unscaled logits, since it performs a softmax on logits internally for efficiency. Do not call this op with the output of softmax, as it will produce incorrect results.
+				</blockquote>
+
+				<p>A common use case is to have <b>logits</b> and <b>labels</b> of shape <b>[batch_size, num_classes]</b>, but higher dimensions are supported, with the axis argument specifying the class dimension.</p>
+
+				<p><b>logits</b> and <b>labels</b> must have the same dtype (either <b>float16</b>, <b>float32</b>, or <b>float64</b>).</p>
+
+				<p><b>Backpropagation</b> will happen into both logits and labels. To disallow backpropagation into labels, pass label tensors through <b>tf.stop_gradient</b> before feeding it to this function.</p>
+				
+				<p>Arguments:</p>
+				<blockquote>
+				<p>- <b>labels</b> Each vector along the class dimension should hold a valid probability distribution e.g. for the case in which labels are of shape [batch_size, num_classes], each row of labels[i] must be a valid probability distribution.</p>
+				<p>- <b>logits</b> Per-label activations, typically a linear output. These activation energies are interpreted as unnormalized log probabilities.</p>
+				<p>- <b>axis</b> The class dimension. Defaulted to -1 which is the last dimension.</p>
+				<p>- <b>name</b> A name for the operation (optional).</p>
+				</blockquote>
+
+				<p><b>Returns</b>:</p>
+				<p>A <b>Tensor</b> that contains the softmax cross entropy loss. Its type is the same as <b>logits</b> and its shape is the same as <b>labels</b> except that it does not have the last dimension of <b>labels</b>.</p>
+
+
+			</div>
+        </div>
+		
+      </div>
+    </section>
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-5">
+                <h2 class="footer-heading mb-4">About Us</h2>
+                <p>Diixo BigData analytics, Inc.</p>
+              </div>
+              <div class="col-md-3 ml-auto">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="index.html#about-section" class="smoothscroll">About Us</a></li>
+                  <li><a href="index.html#services-section" class="smoothscroll">Services</a></li>
+                  <li><a href="index.html#testimonials-section" class="smoothscroll">Testimonials</a></li>
+                  <li><a href="index.html#contact-section" class="smoothscroll">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3 footer-social">
+                <h2 class="footer-heading mb-4">Follow Us</h2>
+                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+            <form action="#" method="post" class="footer-subscribe">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary text-black" type="button" id="button-addon2">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved by @Diixo
+              </p>
+        
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+
+
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+* {
+  word-wrap: break-word;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+a {
+  color: #05f;
+}
+
+a:hover {
+  color: #006;
+}
+
+div._attribution {
+  display: none;
+}
+
+ul.menu {
+  list-style: none;
+  margin: 0.2em 0;
+  padding: 0;
+}
+
+ul.menu li {
+  margin: 0;
+  padding: 0.4em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+main.docs li {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+
+.multi-columns {
+  -webkit-column-width: 20em;
+  -moz-column-width: 20em;
+  column-width: 20em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  table-layout: fixed;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+}
+
+th {
+  background: #eee;
+}
+
+pre {
+  direction: ltr;
+  background-color: rgb(248, 248, 248);
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-left: 3px solid #999;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  /*    background: url(/assets/avatar/163809.png)*/
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
+}
+
+.spinner {
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-animation: rotation .6s infinite linear;
+  -moz-animation: rotation .6s infinite linear;
+  -o-animation: rotation .6s infinite linear;
+  animation: rotation .6s infinite linear;
+  border: 6px solid rgba(0, 128, 255, .8);
+  border-top-color: rgba(0, 128, 255, .2);
+  border-radius: 100%;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes rotation {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+blockquote {
+  border-left: 3px solid #FFEB3B;
+  background-color: #FFFFCC;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+#more-border-br {
+  display: none;
+}
+
+.ka {
+  height: 0;
+  overflow: hidden;
+}
+
+.more {
+  position: relative;
+  height: 40em;
+  overflow: hidden;
+}
+
+.more:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 30em;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(transparent 0px, #fff);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+#more-button {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+#more-spinner {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 47%;
+  z-index: 2;
+}
+
+#more-arrow {
+  position: absolute;
+  left: 47%;
+  bottom: 1em;
+  z-index: 3;
+  color: #ccc;
+}
+
+#more-adsense {
+  background-color: dodgerblue;
+}
+
+a[href^="https://stackoverflow.com/"] {
+  display: none;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+code span.typ {
+}
+
+code span.kwd {
+  color: #00c;
+}
+
+code span.str {
+  color: #0a0;
+}
+
+code span.com {
+  color: #888;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+main a:empty {
+  display: none;
+}
+
+.navbar-toggle .icon-bar {
+  background: #000;
+}
+
+header nav a.navbar-brand {
+}
+
+header nav a.navbar-brand,
+header nav a.nav-link {
+  color: #000;
+}
+
+header nav a.navbar-brand:hover,
+header nav a.nav-link:hover {
+  text-decoration: underline;
+}
+
+footer {
+  padding-bottom: 1rem;
+}
+
+img.error-avatar {
+  width: 64px;
+}
+
+div.skiptranslate {
+  display: none;
+}
+
+main.docs img {
+  max-width: 100%;
+}
+
+li.list-group-item-amazon {
+  font-weight: bold;
+}
+
+.localhost {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+hr {
+  border-color: #ccc;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.hidden {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.page-link {
+  border-color: #ccc;
+}
+
+.buttons .btn {
+  margin-bottom: 0.7em;
+  margin-right: 0.7em;
+}
+
+.description {
+  margin-left: 1em;
+}
+
+.cite {
+  color: red;
+  //display: none;
+}
